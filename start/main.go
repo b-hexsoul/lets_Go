@@ -14,3 +14,5 @@ import "fmt" // a part of the standard library in Go
 func main() {
 	fmt.Println("hello world")
 }
+
+// `go mod init project-name` and then `go mod tidy` in project root

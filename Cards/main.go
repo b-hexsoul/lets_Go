@@ -1,16 +1,11 @@
 package main
 
-import "fmt"
-
 func main() {
 	// slice is delcared with []type
-	cards := []string{"Ace of Diamonds", newCard()}
+	cards := deck{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades") // does not modify the cards slice. returns a new slice
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
-
+	cards.print()
 }
 
 // Delcaring Variables
