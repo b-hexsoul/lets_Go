@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 type deck []string
@@ -31,6 +32,7 @@ func (d deck) print() {
 	for _, card := range d {
 		fmt.Println(card)
 	}
+	fmt.Println("")
 }
 
 func (d deck) toString() string {
@@ -42,6 +44,7 @@ func (d deck) saveToFile(filename string) error {
 }
 
 func (d deck) shuffle() {
+	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(d), func(i, j int) {
 		d[i], d[j] = d[j], d[i]
 	})
@@ -70,3 +73,5 @@ func newDeckFromFile(filename string) deck {
 // go has support for returning multiple values from a function
 
 // values of type error. If nothing went wrong, it will have value of nil
+
+// length of a slice is obtained by using len()
