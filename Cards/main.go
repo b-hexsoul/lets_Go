@@ -2,9 +2,10 @@ package main
 
 func main() {
 	cards := newDeck()
-	hand, remainingCards := deal(cards, 5)
+	hand, _ := deal(cards, 5)
 	hand.print()
-	_, _ = deal(remainingCards, 3)
+	hand.shuffle()
+	hand.print()
 }
 
 // Delcaring Variables
@@ -32,3 +33,11 @@ for index, item := range items {
 // slice is delcared with []type
 // cards := deck{"Ace of Diamonds", newCard()}
 // cards = append(cards, "Six of Spades") // does not modify the cards slice. returns a new slice
+
+// there is a relationship between strings and "byte slices"
+// each element in the slice corresponds to an ASCII character code
+// we need to use byte slice with standard library io WriteFile
+// func WriteFile(filename string, data []byte, perm fs.FileMode) error
+
+// type conversion!
+// []byte("Hi There!")
