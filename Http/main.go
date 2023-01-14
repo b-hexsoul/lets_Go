@@ -52,3 +52,5 @@ type Reader interface {
 // *** A field inside of a struct can be an interface
 // Body field inside the Response Struct can have any value so long as it fulfills the
 // io.ReadCloser interface
+
+// A type satisfies an interface when that type implements all of the functions contained in the interface definition
