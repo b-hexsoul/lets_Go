@@ -45,3 +45,37 @@ sample := struct {
 myArray := [3]int{1,2,3}
 myArray := [...]int{1,4,3} best way to initialize an array
 */
+
+// ******* SLICE *******
+// slice[a:b]
+// a = start index (inclusive)
+// b = end index (exclusive)
+// adding items to a slice
+// numbers := []int{1,2,3,4}
+// numbers = append(numbers, 4)
+
+// You can combine two slices
+// part1 := []int{1,2,3}
+// part2 := []int{4,5,6}
+// combined := append(part1, part2...)
+
+// Preallocation
+// Useful when number of elements are known, but their values are still uknown
+// slice := make([]int, 10)
+
+// ******* MAPS ********
+// key-value pairs
+// myMap := make(map[string]int)
+// myMap := map[string]int{
+// 	"Item 1": 1,
+// 	"Item 2": 2,
+// 	"Item 3": 3,
+// }
+
+// CHECKING EXISTENCE IN A MAP
+// price, found := myMap["price"]
+// if !found {
+// 	fmt.Println("Not found")
+// }
+
+// for key, value := range myMap {}
