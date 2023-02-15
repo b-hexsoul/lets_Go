@@ -12,7 +12,13 @@ package main
 import "fmt" // a part of the standard library in Go
 
 func main() {
-	fmt.Println("hello world")
+	for v := range [11]int{} {
+		if v%2 == 0 {
+			fmt.Printf("%v is even \n", v)
+		} else {
+			fmt.Printf("%v is odd \n", v)
+		}
+	}
 }
 
 // `go mod init project-name` and then `go mod tidy` in project root
